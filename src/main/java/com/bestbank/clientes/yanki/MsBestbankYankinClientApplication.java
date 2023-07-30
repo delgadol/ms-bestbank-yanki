@@ -1,13 +1,13 @@
-package com.bestbank.yanki;
+package com.bestbank.clientes.yanki;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MsBestbankYankinApplication {
+public class MsBestbankYankinClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsBestbankYankinApplication.class, args);
+		SpringApplication.run(MsBestbankYankinClientApplication.class, args);
 	}
 
 }
