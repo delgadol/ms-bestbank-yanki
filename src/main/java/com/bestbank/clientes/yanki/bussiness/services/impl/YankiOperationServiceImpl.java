@@ -38,6 +38,8 @@ public class YankiOperationServiceImpl implements YankiOperationService {
   @Autowired
   private TransaccionesRegistrarYankiProducer servEnvTrans;
   
+  private static final String ERROR_PROD_NO_ENCONTRADO = "PRODUCTO NO ENCONTRADO";
+  
   
   @Override
   public Mono<AppYankiNotificacion> postCliente(ClienteYankiReq data) {
@@ -98,7 +100,7 @@ public class YankiOperationServiceImpl implements YankiOperationService {
         })
         .switchIfEmpty(
             Mono.just(new AppYankiNotificacion(
-                cliente.getCodCtrlBroker(), "PRODUCTO NO ENCONTRADO",
+                cliente.getCodCtrlBroker(), ERROR_PROD_NO_ENCONTRADO,
                 BankFnUtils.getLegacyDateTimeNow())
            )
         );        
@@ -122,7 +124,7 @@ public class YankiOperationServiceImpl implements YankiOperationService {
         })
         .switchIfEmpty(
             Mono.just(new AppYankiNotificacion(
-                producto.getCodCtrlBroker(), "PRODUCTO NO ENCONTRADO",
+                producto.getCodCtrlBroker(), ERROR_PROD_NO_ENCONTRADO,
                 BankFnUtils.getLegacyDateTimeNow())
            )
         );  
@@ -147,7 +149,7 @@ public class YankiOperationServiceImpl implements YankiOperationService {
         })
         .switchIfEmpty(
             Mono.just(new AppYankiNotificacion(
-                transaccion.getNumTelefono(), "PRODUCTO NO ENCONTRADO",
+                transaccion.getNumTelefono(), ERROR_PROD_NO_ENCONTRADO,
                 BankFnUtils.getLegacyDateTimeNow())
            )
         );  

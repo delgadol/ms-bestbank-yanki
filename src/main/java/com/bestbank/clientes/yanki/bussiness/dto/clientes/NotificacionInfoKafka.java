@@ -4,6 +4,10 @@ import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/**
+ * Representa una notificavion de Kafka
+ * La clase NotificacionInfoKafk es utilizada para recibir notificaciones
+ */
 @Data
 @AllArgsConstructor
 public class NotificacionInfoKafka implements Serializable {
