@@ -1,6 +1,5 @@
 package com.bestbank.clientes.yanki.bussiness.messages.producers;
 
-import com.bestbank.clientes.yanki.bussiness.dto.productos.ProductoBrokerReq;
 import com.bestbank.clientes.yanki.bussiness.dto.transacciones.InfoTransacionBrokerReq;
 import com.bestbank.commons.utils.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
